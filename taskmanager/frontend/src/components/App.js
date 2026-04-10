@@ -4,6 +4,7 @@ import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom"
 
 import Header from "./layout/Header";
 import Dashboard from "./tasks/Dashboard";
+import TravelDashboard from "./travel/TravelDashboard";
 
 import { Provider } from 'react-redux';
 import { Provider as AlertProvider } from 'react-alert';
@@ -38,6 +39,7 @@ class App extends Component {
                             <div className="container">
                                 <Switch>
                                     <PrivateRoute exact path="/" component={Dashboard} />
+                                    <PrivateRoute exact path="/travel" component={TravelDashboard} />
                                     <Route exact path="/register" component={Register} />
                                     <Route exact path="/login" component={Login} />
                                 </Switch>

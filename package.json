@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./taskmanager/frontend/src/index.js --watch --output-path ./taskmanager/frontend/static/js",
-    "build": "webpack --mode production ./taskmanager/frontend/src/index.js --output-path ./taskmanager/frontend/static/js"
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode development ./taskmanager/frontend/src/index.js --watch --output-path ./taskmanager/frontend/static/js",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production ./taskmanager/frontend/src/index.js --output-path ./taskmanager/frontend/static/js"
   },
   "keywords": [],
   "author": "",

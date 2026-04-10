@@ -36,14 +36,26 @@ class Header extends Component {
                 </li>
             </ul>
         );
+        const navLinks = isAuthenticated ? (
+            <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li className="nav-item">
+                    <Link to="/" className="nav-link">Tasks</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/travel" className="nav-link">Travel Challenges</Link>
+                </li>
+            </ul>
+        ) : null;
+
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Task Manager</a>
+                    <Link className="navbar-brand" to="/">Travel Challenge App</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        {navLinks}
                     </div>
                     { isAuthenticated ? authLinks: guestLinks }
                 </div>
